@@ -5,7 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos - Mi Página Web</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        nav {
+            background: linear-gradient(90deg, #ff6f61, #ff9068, #ffb78c, #ff6f61);
+            color: white;
+            padding: 1.5em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-bottom: 2px solid #ffb78c;
+            animation: gradientAnimation 10s ease infinite;
+            background-size: 400% 400%;
+        }
+
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.7em 1.5em;
+            border-radius: 30px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            font-weight: 600;
+        }
+
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.1);
+        }
+
+        section {
+            padding: 3em;
+            margin: 2em auto;
+            max-width: 1200px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        section h1 {
+            margin-top: 0;
+            color: #ff6f61;
+            font-size: 2.5em;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        section p, section ul {
+            font-size: 1.1em;
+            margin-top: 1.5em;
+            text-align: center;
+        }
+
+        .proyecto {
+            margin-bottom: 3em;
+            padding: 2em;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .proyecto h2 {
+            color: #ff6f61;
+            font-size: 1.8em;
+            margin-bottom: 1em;
+        }
+
+        .proyecto p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 1.5em;
+        }
+
+        .proyecto:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li {
+                margin: 0.5em 0;
+            }
+
+            section {
+                padding: 2em;
+            }
+
+            section h1 {
+                font-size: 2em;
+            }
+
+            section p, section ul {
+                font-size: 1em;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -20,18 +146,36 @@
 
     <section>
         <h1>Proyectos</h1>
-        <p>A lo largo de mi carrera, he trabajado en diversos proyectos, desde el desarrollo de aplicaciones web hasta la automatización de procesos empresariales.</p>
+        <p>A lo largo de mi carrera, he desarrollado diversos proyectos que abarcan diferentes industrias y necesidades empresariales.</p>
+
         <div class="proyecto">
-            <h2>Proyecto 1: Plataforma de Gestión Escolar</h2>
-            <p>Una aplicación web diseñada para instituciones educativas que permite gestionar la información de estudiantes, docentes y calificaciones de manera eficiente.</p>
+            <h2>Sistema de Biblioteca</h2>
+            <p>Una plataforma completa para la gestión de bibliotecas, que incluye préstamos, devoluciones y administración de catálogos.</p>
         </div>
+
         <div class="proyecto">
-            <h2>Proyecto 2: Tienda en Línea</h2>
-            <p>Desarrollo de un e-commerce con un sistema de gestión de productos y pagos en línea, optimizado para móviles.</p>
+            <h2>Sistema de Notas</h2>
+            <p>Un sistema escolar para la administración de calificaciones, materias y estudiantes, optimizado para profesores y alumnos.</p>
         </div>
+
         <div class="proyecto">
-            <h2>Proyecto 3: Sistema de Control de Inventarios</h2>
-            <p>Un sistema automatizado para la gestión de inventarios en almacenes, con notificaciones de stock bajo y generación de reportes.</p>
+            <h2>E-commerce de Artesanías</h2>
+            <p>Una tienda en línea para la venta de productos artesanales, con integración de pagos y gestión de inventario en tiempo real.</p>
+        </div>
+
+        <div class="proyecto">
+            <h2>Sistema de Inventarios</h2>
+            <p>Software diseñado para gestionar eficientemente el stock de productos en bodegas, con alertas y reportes detallados.</p>
+        </div>
+
+        <div class="proyecto">
+            <h2>Control de Pacientes</h2>
+            <p>Aplicación para hospitales que gestiona historiales médicos, citas y control de pacientes, mejorando la atención sanitaria.</p>
+        </div>
+
+        <div class="proyecto">
+            <h2>Gestor de Facturas Electrónicas (DTE)</h2>
+            <p>Un sistema para la gestión y emisión de Documentos Tributarios Electrónicos (DTE) para empresas que buscan automatizar su facturación.</p>
         </div>
     </section>
 </body>
