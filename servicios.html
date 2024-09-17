@@ -1,5 +1,175 @@
 <!DOCTYPE html>
 <html lang="es">
+<style>
+    body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+nav {
+    background: linear-gradient(90deg, #ff6f61, #ff9068, #ffb78c, #ff6f61);
+    color: white;
+    padding: 1.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #ffb78c;
+    animation: gradientAnimation 10s ease infinite;
+    background-size: 400% 400%;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.7em 1.5em;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+section {
+    padding: 3em;
+    margin: 2em auto;
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+section h1 {
+    margin-top: 0;
+    color: #ff6f61;
+    font-size: 2.5em;
+    text-align: center;
+    font-weight: bold;
+}
+
+section p, section ul {
+    font-size: 1.1em;
+    margin-top: 1.5em;
+}
+
+section h2 {
+    color: #ff6f61;
+    font-size: 2em;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+section .testimonio, section .faq-item {
+    margin-bottom: 2em;
+    padding: 1.5em;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+section .testimonio p, section .faq-item p {
+    font-size: 1.1em;
+    color: #555;
+}
+
+section .faq-item h3 {
+    font-size: 1.5em;
+    color: #da5f54;
+    margin-bottom: 0.5em;
+}
+
+/* Estilos para el pie de página */
+footer {
+    text-align: center;
+    padding: 2em;
+    background-color: #333;
+    color: white;
+    margin-top: 2em;
+}
+
+footer p {
+    margin: 0.5em 0;
+}
+
+footer .redes-sociales a {
+    color: white;
+    margin: 0 1em;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+footer .redes-sociales a:hover {
+    color: #ff9068;
+}
+
+/* Media query para mejorar la experiencia en dispositivos móviles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 0.5em 0;
+    }
+
+    section {
+        padding: 2em;
+    }
+
+    section h1 {
+        font-size: 2em;
+    }
+
+    section p, section ul {
+        font-size: 1em;
+    }
+
+    form {
+        padding: 1.5em;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        font-size: 1em;
+    }
+
+    footer {
+        padding: 1.5em;
+    }
+
+    footer .redes-sociales a {
+        font-size: 1em;
+    }
+}
+
+</style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,5 +198,43 @@
             <li><i class="fas fa-cloud"></i> <strong>Soluciones en la Nube:</strong> Implementación de soluciones escalables en la nube, garantizando accesibilidad y seguridad de tus datos.</li>
         </ul>
     </section>
+
+    <!-- Sección de testimonios -->
+    <section id="testimonios">
+        <h2>Testimonios</h2>
+        <div class="testimonio">
+            <p>"Gracias al desarrollo web de alta calidad, ahora mi negocio tiene una presencia online que ha incrementado significativamente nuestras ventas. ¡Altamente recomendado!"</p>
+            <p><strong>- Juan Pérez, CEO de Empresa XYZ</strong></p>
+        </div>
+        <div class="testimonio">
+            <p>"La aplicación móvil que desarrollaron para nosotros ha facilitado la comunicación con nuestros clientes. Su equipo es muy profesional y eficiente."</p>
+            <p><strong>- Laura García, Directora de Marketing en ABC Corp.</strong></p>
+        </div>
+    </section>
+
+    <!-- Sección de preguntas frecuentes (FAQ) -->
+    <section id="faq">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="faq-item">
+            <h3>¿Cuánto tiempo toma desarrollar un sitio web?</h3>
+            <p>El tiempo de desarrollo depende de la complejidad del proyecto. Para un sitio web simple, puede tomar entre 2 y 4 semanas. Los proyectos más complejos pueden requerir más tiempo.</p>
+        </div>
+        <div class="faq-item">
+            <h3>¿Ofrecen mantenimiento después del desarrollo?</h3>
+            <p>Sí, ofrecemos paquetes de mantenimiento para garantizar que tu sitio o aplicación esté siempre actualizado y funcionando sin problemas.</p>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+        <p>Síguenos en redes sociales:</p>
+        <div class="redes-sociales">
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+    </footer>
 </body>
 </html>
+
