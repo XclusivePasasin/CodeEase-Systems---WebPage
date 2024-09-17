@@ -3,9 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabajos - Mi Página Web</title>
+    <title>Trabajos</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+    footer {
+        text-align: center;
+        padding: 2em;
+        background-color: #333;
+        color: white;
+        margin-top: 2em;
+    }
+
+    footer p {
+        margin: 0.5em 0;
+    }
+
+    footer .redes-sociales a {
+        color: white;
+        margin: 0 1em;
+        text-decoration: none;
+        font-size: 1.2em;
+        transition: color 0.3s ease;
+    }
+
+    footer .redes-sociales a:hover {
+        color: #ff9068;
+    }
+    </style>
 </head>
 <body>
     <nav>
@@ -28,5 +53,36 @@
         </ul>
         <p>Si estás interesado en contratar mis servicios, no dudes en ponerte en contacto a través de la sección <a href="contacto.html">Contacto</a>.</p>
     </section>
+    <section id="testimonios">
+        <h2>Lo que dicen mis clientes</h2>
+        <blockquote>
+            <p>"Gracias a su trabajo, nuestra empresa vio un aumento del 50% en ventas online. ¡Altamente recomendado!"</p>
+            <cite>– Carlos López, CEO de Empresa Crimson</cite>
+        </blockquote>
+        <blockquote>
+            <p>"Su conocimiento en desarrollo y SEO mejoró significativamente la presencia en línea de nuestro negocio."</p>
+            <cite>– Ana Pérez, Gerente de Marketing</cite>
+        </blockquote>
+    </section>
+
+    <section id="proceso">
+        <h2>Proceso de Trabajo</h2>
+        <ol>
+            <li><strong>Reunión Inicial:</strong> Nos reunimos para entender tus necesidades y objetivos.</li>
+            <li><strong>Propuesta:</strong> Desarrollo una propuesta personalizada con los detalles del proyecto.</li>
+            <li><strong>Desarrollo:</strong> Iniciamos el desarrollo, con revisiones periódicas y actualizaciones.</li>
+            <li><strong>Entrega y Soporte:</strong> Entregamos el proyecto final y brindamos soporte técnico.</li>
+        </ol>
+    </section>
+
+    <footer></footer>
+        <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+        <p>Síguenos en redes sociales:</p>
+        <div class="redes-sociales">
+            <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+        </div>
+    </footer>
 </body>
 </html>
